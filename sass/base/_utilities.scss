@@ -1,0 +1,13 @@
+.u-center-text {
+  text-align: center;
+}
+
+@mixin u-margin-bottom-x {
+  @for $i from 1 through 12 {
+    .u-margin-bottom-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+  }
+}
+
+@include u-margin-bottom-x;

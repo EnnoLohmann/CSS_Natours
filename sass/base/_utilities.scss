@@ -11,3 +11,14 @@
 }
 
 @include u-margin-bottom-x;
+
+
+@mixin u-margin-top-x {
+  @for $i from 1 through 12 {
+    .u-margin-top-#{$i} {
+      margin-top: #{$i}rem;
+    }
+  }
+}
+
+@include u-margin-top-x;

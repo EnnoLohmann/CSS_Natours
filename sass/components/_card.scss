@@ -14,27 +14,38 @@
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-    &--front{
-        background-color: $color-white;
-
+    &--front {
+      background-color: $color-white;
     }
 
-    &--back{
-        transform: rotateY(180deg);
+    &--back {
+      transform: rotateY(180deg);
 
-        &-1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary);
-        }
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary
+        );
+      }
 
-        &-2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary);
-        }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary
+        );
+      }
 
-        &-3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary);
-        }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary
+        );
+      }
     }
   }
 
@@ -43,20 +54,37 @@
     height: 23rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &--1 {
-        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary), url(../img/nat-5.jpg);
-        background-blend-mode: screen;
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary
+        ),
+        url(../img/nat-5.jpg);
+      background-blend-mode: screen;
     }
 
     &--2 {
-        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary), url(../img/nat-5.jpg);
-        background-blend-mode: screen;
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary
+        ),
+        url(../img/nat-6.jpg);
+      background-blend-mode: screen;
     }
 
-    &--3{
-        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary), url(../img/nat-5.jpg);
-        background-blend-mode: screen;
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary
+        ),
+        url(../img/nat-7.jpg);
+      background-blend-mode: screen;
     }
   }
 
@@ -77,29 +105,76 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     &--1 {
-        background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85),  rgba($color-secondary, 0.85));
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary, 0.85)
+      );
     }
-  }
 
-  &__details {
-      padding: 3rem;
-      ul {
-          list-style: none;
-          width: 80%;
-          margin: 0 auto;
-            padding: 0;
-          li {
-            text-align: center;
-            font-size: 1.5rem;
-            padding: 1rem;
+    &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary, 0.85)
+        );
+      }
 
-            &:not(:last-child) {
-                border-bottom: 1px solid $color-grey-light-2;
-            }
-          }
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary, 0.85)
+        );
       }
   }
 
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $color-white
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__price-value {
+      font-size: 6rem;
+      font-weight: 100;
+      margin: 0;
+  }
 
   &:hover &__side--front {
     transform: rotateY(-180deg);

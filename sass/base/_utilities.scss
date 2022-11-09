@@ -1,11 +1,11 @@
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 @mixin u-margin-bottom-x {
   @for $i from 1 through 12 {
     .u-margin-bottom-#{$i} {
-      margin-bottom: #{$i}rem;
+      margin-bottom: #{$i}rem !important;
     }
   }
 }
@@ -16,7 +16,7 @@
 @mixin u-margin-top-x {
   @for $i from 1 through 12 {
     .u-margin-top-#{$i} {
-      margin-top: #{$i}rem;
+      margin-top: #{$i}rem !important;
     }
   }
 }

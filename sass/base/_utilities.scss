@@ -6,6 +6,10 @@
   @for $i from 1 through 12 {
     .u-margin-bottom-#{$i} {
       margin-bottom: #{$i}rem !important;
+
+      @include respond(tab-port) {
+        margin-bottom: #{$i/2}rem !important;
+      }
     }
   }
 }
@@ -17,6 +21,10 @@
   @for $i from 1 through 12 {
     .u-margin-top-#{$i} {
       margin-top: #{$i}rem !important;
+
+      @include respond(tab-port) {
+        margin-top: #{$i/2}rem !important;
+      }
     }
   }
 }
